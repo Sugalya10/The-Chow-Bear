@@ -1,0 +1,25 @@
+{% extends 'chow/layouts/main.html' %}
+
+{% block content %}    
+    <h1>Your Shopping Cart</h1>
+ 
+    <div class="product-list">
+ 
+    
+ 
+    {% for food in cart_items %}
+    <div class="product-item">
+        <p>{{ food.product.name }} ({{ food.quantity }})</p>
+        <p>Price: ${{ food.product.price }}</p>
+        <a href="{% url 'cart:remove_from_cart' food.id %}">Remove</a>
+    </div>
+    {% empty %}
+    <p>Your cart is empty.</p>
+    {% endfor %}
+ 
+    </div>
+ 
+    <p>Total Price: ${{ total_price }}</p>
+ 
+    <a href="{% url 'home' %}">Continue Shopping</a>
+{% endblock content %}

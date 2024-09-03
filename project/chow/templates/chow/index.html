@@ -1,0 +1,28 @@
+{% extends 'chow/layouts/main.html' %}
+{% load static %}
+
+{% block content %}
+<div class="marquee">
+    <p>The prices vary based on your customization. | The Chow Bear will contact you shortly regarding your order. | Happy Tummy!</p>
+  </div>
+{% include 'chow/layouts/carousel.html' %}
+
+<br>
+<br>
+
+<div id="app-des">Introducing "The Chow Bear" – your ultimate culinary companion, where homemade delights meet a world of flavors! Dive into a gastronomic adventure like no other, where every dish is a labor of love crafted in home kitchens with passion and care. With an array of cuisines from around the globe, we tantalize your taste buds with authenticity and innovation.
+
+But wait, there's more! At The Chow Bear, we're all about customization. From dietary preferences to personalized twists on classics, we cater to your cravings with tailor-made culinary creations that speak to your unique palate. Plus, we're committed to your well-being, offering a bounty of organic products and farm-fresh produce that nourish both body and soul.
+
+Join us in our quest to revolutionize the way you eat – one delicious bite at a time. Whether you're craving comfort food from grandma's kitchen or eager to explore exotic flavors from distant lands, The Chow Bear is your trusted ally in the pursuit of culinary bliss. Get ready to embark on a journey of flavor, freshness, and fulfillment with The Chow Bear – where every meal is a celebration of good taste and good health!
+</div>
+
+<center>
+    <img style="height:180px; width: 300px;" src="{% static 'images/chowb.png' %}" alt="">
+</center>
+<hr style="border-color:#797c80; ">
+<hr style="border-color:#666d6f;">
+
+
+{% endblock content %}
+

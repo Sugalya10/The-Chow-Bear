@@ -1,0 +1,35 @@
+{% extends 'chow/layouts/main.html' %}
+{% load static %}
+{% block content %}
+
+  <section class="bg-light py-4 my-5 bg-transparent" style="min-height:600px;">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h4 class="mb-3 heading" style="font-family:cursive; font-size: 50px;">Epicurean Odyssey</h4>
+          <hr style="background: linear-gradient(brown,yellow,tan); border-color:#b8bfc2;">
+          <hr style="background: linear-gradient(brown,yellow,tan); border-color:#b8bfc2;">
+        </div>
+        {% for food in cuisines %} 
+         
+        <div class="col-sm-12 col-lg-4 bg-transparent">
+          <a class="hov" style="text-decoration: none;" href="{% url 'menu' food.name %}"> 
+          <div class="card my-3 bg-transparent list">
+            <img src="{{food.image.url}}"  class="card-image-top card-title card-text" alt="Menu">
+ 
+            <div class="card-body bg-transparent">
+              <h5 class="card-title sub">{{ food.name }}</h5>
+              <p class="card-text sub-des">{{ food.description }}</p>
+            </div>
+          </div>
+          </a>
+        </div>
+        {% endfor %}
+      </div>
+      </div>
+  </section>
+  <center>
+    <img style="height:180px; width: 300px;" src="{% static 'images/chowb.png' %}" alt="">
+</center>
+
+{% endblock content %}

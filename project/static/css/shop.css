@@ -1,0 +1,152 @@
+
+
+body
+{
+background-repeat: no-repeat;
+background-size: cover;
+height: 100%;
+background-color: wheat;
+
+}
+.border
+{
+    height: 370px;
+    margin-top: 100px;
+    width: 400px;
+    background-color: rgba(0,0,0,0.5) !important;
+    border-radius: 25pt;
+}
+
+#cat-f
+{
+ font-size: 5px;   
+}
+#foot
+{
+    color: wheat;
+    background-color:maroon;
+
+}
+.nav-link{
+    font-size: 20px ;
+    font-family: 'Poppins';
+    font-weight: bold;
+
+}
+#app-des{
+    font-family: 'Poppins';
+   font-size: 20px;
+    color:rgba(114, 108, 117, 0.84);
+    border-radius: 10px ;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 80px;
+    font-weight: 10px;
+}
+.sub-des{
+    font-family: 'Poppins';
+    font-weight: 100;
+    font-size: 15px;
+    color:rgb(117, 124, 126);
+}
+.dish-des{
+    font-family: 'Poppins';
+    font-weight: 100;
+    font-size: 18px;
+    color:rgb(117, 124, 126);
+}
+.card
+{
+    background: transparent;
+}
+
+.sub{
+    color:crimson;
+    font-family: 'Poppins';
+    font-size: 26px;
+    font-weight: lighter;
+
+
+}
+.sub-ind{
+    font-family:cursive;
+    font-size: 25px;
+    font-weight: lighter;
+}
+.heading
+{
+    color: lightslategray;
+    font-style: italic;
+    font-size: 30px;
+    
+}
+a
+{
+    text-decoration: none;
+}
+
+.tip {
+    background-color: rgb(216, 48, 18);
+    color: white;
+    width: 92px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 12px;
+    display: inline;
+    border-radius: 5px;
+    padding: 5px;
+    position:absolute;
+    top: 0;
+    right: 20px;
+    z-index: 10;
+  }
+.pic-box{
+    position: relative;
+}
+
+.iconv{
+    height: 10px;
+    width: 10px;
+    
+}
+.carousel-inner{
+    height: 600px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.list{
+    height: 500px;
+    width: 100%;
+    object-fit: cover; 
+    border-radius: 20px;  
+}
+.card-image-top{
+    height: 200px;
+    width: 100%;
+    object-fit: cover;  
+}
+.navbar-brand{
+    font-family: 'Brush Script MT', cursive;
+    height: 40px;
+    color: aliceblue;
+}
+
+.price{
+    color:mediumblue;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.marquee {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: marquee 30s linear infinite;
+    color:darkblue;
+  }
+
+  @keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+  }

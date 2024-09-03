@@ -1,0 +1,42 @@
+{% extends 'chow/layouts/main.html' %}
+{% load static %}
+
+{% block content %}
+<section class="bg-light py-4 my-5" style="min-height:600px;">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h4 class="mb-3" style="font-weight: bold; font-style: italic; color:slategrey; font-size: 40px;">{{dishes}}</h4>
+        <hr style="border-color:#b8bfc2;">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">{{dishes}}</li>
+          </ol>
+        </nav>
+      </div>
+      <div class="col-4 my-3 pic-box">
+          <img style="height: 250 px; width:300 px;" src="{{dishes.food_image.url}}"  class="card-image-top" alt="{{dishes}}">
+      </div>
+      <div class="col-8 my-3">
+          <h5 style="font-size: 30px; color:maroon; font-family:'Poppins' cursive;">{{dishes | upper}}</h5>
+          <p style="color:green; font-weight: bold;font-style: italic;"> from {{dishes.vendor}}</p>
+          <p class="dish-des">{{dishes.description}}</p>
+          {% if dishes.is_vegetarian %}
+          <img style="height: 50px; width: 50px;" class="iconv" src="{% static 'images/vv.gif' %}" alt="Vegetarian Icon">
+          {% else %}
+          <img style="height: 50px; width: 50px;" class="icon" src="{% static 'images/nv.gif' %}" alt="Non-Vegetarian Icon">
+          {% endif %}
+          {% if dishes.is_featured %}
+          <div class="float-end tip pic-box">Crowd-Pleaser</div>
+          {% endif %}
+          <h5 class="my-2 price">Price:Rs.{{dishes.price}}</h5>
+          <br>
+          <a href="{% url 'custom' %}">
+          <button type="Submit" class="btn btn-warning">Buy Now</button>
+          </a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock content %}

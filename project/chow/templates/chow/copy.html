@@ -1,0 +1,44 @@
+{% extends 'chow/layouts/main.html' %}
+{% load static %}
+<script src="{% static 'js/slider.js' %}"></script>
+{% block content %}
+  <section style="position: relative;
+  height: 100%;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;">
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <h1 class="title one">Meaty Paradise</h1>
+          <img src="{% static 'images/C1.jpg' %}" alt="" />
+        </div>
+
+        <div class="swiper-slide">
+          <h1 class="title two">Green Garden</h1>
+          <img src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/62411bbf-dde9-4654-9298-1fe3e7da2d64" alt="" />
+        </div>
+
+        <div class="swiper-slide">
+          <h1 class="title three"></h1>
+          <img src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/b49c729f-65b0-4a2a-baf7-1d9f180df0a6" alt="" />
+        </div>
+
+        <div class="swiper-slide">
+          <h1 class="title four">Brugge</h1>
+          <img src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/c9a61071-c74d-4e8b-966a-6948cdbd9665" alt="" />
+        </div>
+
+        <div class="swiper-slide">
+          <h1 class="title five">Bavaria</h1>
+          <img src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/25ab6cb7-9251-4aa5-9993-32ebd8542616" alt="" />
+        </div>
+
+        <div class="swiper-slide">
+          <h1 class="title six">Get you Jam on!</h1>
+          <img src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/365656bc-24bc-4d95-92da-7f34faa616cf" alt="" />
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock content %}
+
+

@@ -1,0 +1,22 @@
+{% extends 'chow/layouts/main.html' %}
+{% load static %}
+{% block content%}
+<hr style="border-color:#666d6f;">
+<div class="container" style="margin-top:70px;min-height:600px;">
+    <div class="row">
+      <div class="col-12">
+        <h2 style="color: rgba(128, 0, 0, 0.671); ;" class="mb-3">Ask you Bear Anything!</h2>
+        <hr style="border-color:#b8bfc2;">
+      </div>
+    </div>
+<div style="padding: 30px;" class="container"><form action="" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{order.as_p}}
+    <button type="Submit" class="btn btn-warning">Place Your Order</button>
+
+</form>
+</div>
+<center>
+    <img style="height:180px; width: 300px;" src="{% static 'images/chowb.png' %}" alt="">
+</center>
+{% endblock content%}
